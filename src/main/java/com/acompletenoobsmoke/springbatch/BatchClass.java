@@ -16,13 +16,13 @@ public class BatchClass {
     public JobBuilder jobBuilder;
     public StepBuilder stepBuilder;
 
-    @Bean
-    public Step firstStep() {
-        this.stepBuilder.tasklet(new Tasklet() {
-            @Override
-            public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
-                return null;
-            }
-        });
-    }
+//    @Bean
+//    public Step firstStep() {
+//        this.stepBuilder.tasklet(new Tasklet() {
+//            @Override
+//            public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
+//                return null;
+//            }
+//        });
+//    }
 }
