@@ -56,10 +56,11 @@ public class SpringBatchApplication {
     }
 
     @Bean
-    protected Job maskingJob(JobRepository jobRepository, Step maskingStep) {
+    protected Job maskingJob(JobRepository jobRepository, Step maskingStep, BatchJobCompletedListener jobCompleted) {
         System.out.println("Using this job -- SWAMP IZZO");
         return new JobBuilder("masking-job", jobRepository)
                 .start(maskingStep)
+                .listener(jobCompleted)
                 .build();
     }
 
